@@ -81,10 +81,20 @@ namespace ConsoleApp2
             //output to the console window
             Console.WriteLine("Student's first name : {0}", SFirstName);
             Console.WriteLine("Student's last name : {0}", SLastName);
-            Console.WriteLine($"born on {SBirthdate}");
+            Console.WriteLine($"\n born on {SBirthdate}");
             Console.WriteLine($"lives on {SAddressLine1} {SAddressLine2} {SCity} {SCountry} {SZip_postal}");
-            Console.WriteLine("{0} {1} is taking a {2} {3} course titled {4}. It will take about {5} weeks to complete.", SFirstName, SLastName, departmentHead, degreeName, courseName, duration_in_wks);
+            Console.WriteLine("\n {0} {1} is taking a {2} {3} course titled {4}. It will take about {5} weeks to complete.", SFirstName, SLastName, departmentHead, degreeName, courseName, duration_in_wks);
 
+            //CHALLENGE : Using Console.ReadLine(), prompt a user for information about a student.
+            Console.WriteLine("\n Please enter a new name you want the student's first name to be changed to: ");
+            SFirstName = Console.ReadLine();
+            Console.WriteLine("\n Student's first name has been changed to {0}.", SFirstName);
+            Console.WriteLine("\n Please enter a new name you want the student's last name to be changed to: ");
+            SLastName = Console.ReadLine();
+            Console.WriteLine("\n Student's name has been changed to {0} {1}.", SFirstName, SLastName);
+            Console.WriteLine("So... {0} {1}, how old are you?", SFirstName, SLastName);
+            int UserAge = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("I see, {0} {1} is {2} old!", SFirstName, SLastName, UserAge);
         }
     }
 }
