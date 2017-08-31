@@ -10,31 +10,80 @@ namespace ConsoleApp2
     {
         static void Main(string[] args)
         {
-            //teachers and students' info
-            string firstName = "";
-            string lastName = "";
-            DateTime birthdate;
-            string addressLine1 = "";
-            string addressLine2= "";
-            string city= "";
-            string state_province = "";
-            int zip_postal = 0;
-            string country = "";
-
+            //declare variables
+            //student's info
+            string SFirstName = "";
+            string SLastName = "";
+            DateTime SBirthdate;
+            string SAddressLine1 = "";
+            string SAddressLine2= "";
+            string SCity= "";
+            string SState_province = "";
+            int SZip_postal = 0;
+            string SCountry = "";
+            //teacher's info
+            string TFirstName = "";
+            string TLastName = "";
+            DateTime TBirthdate;
+            string TAddressLine1 = "";
+            string TAddressLine2 = "";
+            string TCity = "";
+            string TState_province = "";
+            int TZip_postal = 0;
+            string TCountry = "";
             //UProgram info
             string programName = "";
             string departmentHead = "";
             string degrees = "";
-
             //degree info
             string degreeName = "";
             bool creditsRequired;
-
             //course info
             string courseName = "";
             short credits = 0;
             short duration_in_wks = 0;
             string teacher = "";
+
+            //assign some values
+            //assign values for student
+            SFirstName = "Jae";
+            SLastName = "Choi";
+            SBirthdate = new DateTime(1983, 2, 7);
+            SAddressLine1 = "15, Talsil-ro";
+            SAddressLine2 = "Giheung-gu";
+            SCity = "Yongin-si";
+            SState_province = "Gyeonggi-do";
+            SZip_postal = 17042;
+            SCountry = "South Korea";
+            //assign values for teacher
+            TFirstName = "Dan";
+            TLastName = "Lee";
+            TBirthdate = new DateTime(1987, 1, 2);
+            TAddressLine1 = "8080, Google";
+            TAddressLine2 = "Seocho";
+            TCity = "Seoul";
+            TState_province = "";
+            TZip_postal = 8080;
+            TCountry = "South Korea";
+            //UProgram info
+            programName = "Front-end Web Development Nanodegree Program";
+            departmentHead = "Udacity";
+            degrees = "Nanodegree";
+            //degree info
+            degreeName = "Nanodegree";
+            creditsRequired = false;
+            //course info
+            courseName = "Front-end Web Development Nanodegree Course";
+            credits = 1;
+            duration_in_wks = 30;
+            teacher = "Dan Lee";
+
+            //output to the console window
+            Console.WriteLine("Student's first name : {0}", SFirstName);
+            Console.WriteLine("Student's last name : {0}", SLastName);
+            Console.WriteLine($"born on {SBirthdate}");
+            Console.WriteLine($"lives on {SAddressLine1} {SAddressLine2} {SCity} {SCountry} {SZip_postal}");
+            Console.WriteLine("{0} {1} is taking a {2} {3} course titled {4}. It will take about {5} weeks to complete.", SFirstName, SLastName, departmentHead, degreeName, courseName, duration_in_wks);
 
         }
     }
