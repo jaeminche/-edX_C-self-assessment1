@@ -16,8 +16,8 @@ namespace ConsoleApp2
             string SLastName = "";
             DateTime SBirthdate;
             string SAddressLine1 = "";
-            string SAddressLine2= "";
-            string SCity= "";
+            string SAddressLine2 = "";
+            string SCity = "";
             string SState_province = "";
             int SZip_postal = 0;
             string SCountry = "";
@@ -85,7 +85,7 @@ namespace ConsoleApp2
             Console.WriteLine($"lives on {SAddressLine1} {SAddressLine2} {SCity} {SCountry} {SZip_postal}");
             Console.WriteLine("\n {0} {1} is taking a {2} {3} course titled {4}. It will take about {5} weeks to complete.", SFirstName, SLastName, departmentHead, degreeName, courseName, duration_in_wks);
 
-            //CHALLENGE : Using Console.ReadLine(), prompt a user for information about a student.
+            //CHALLENGE: Using Console.ReadLine(), prompt a user for information about a student.
             Console.WriteLine("\n Please enter a new name you want the student's first name to be changed to: ");
             SFirstName = Console.ReadLine();
             Console.WriteLine("\n Student's first name has been changed to {0}.", SFirstName);
@@ -95,6 +95,19 @@ namespace ConsoleApp2
             Console.WriteLine("So... {0} {1}, how old are you?", SFirstName, SLastName);
             int UserAge = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("I see, {0} {1} is {2} old!", SFirstName, SLastName, UserAge);
+
+            long value = Factorial(10);
+            Console.WriteLine(value);
+        }
+
+        static long Factorial(int n)
+        {
+            if (n == 0)
+            {
+                return 1;
+            }
+
+            return n * Factorial(n - 1);
         }
     }
 }
